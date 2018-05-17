@@ -6,6 +6,11 @@ class Application
   def call(env)
     resp = Rack::Response.new
     req = Rack::Response.new(env)
+
+    if @@cart.empty?
+      resp.write "Your cart is empty"
+    else
+    end
   end
 
   def handle_search(search_term)
@@ -15,5 +20,5 @@ class Application
       return "Couldn't find #{search_term}"
     end
   end
-  
+
 end
