@@ -16,6 +16,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
+      item = req.params["item"]
     end
 
 
