@@ -11,6 +11,8 @@ class Application
       resp.write "Your cart is empty"
     else
     end
+
+    resp.finish
   end
 
   def handle_search(search_term)
